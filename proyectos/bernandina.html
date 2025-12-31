@@ -47,8 +47,8 @@
                         <h3>Recorrido Virtual - Bernandina</h3>
                         
                         <div class="video-selector">
-                            <button class="btn-video active" data-id="D7vMlM3mAmo">Dpto. 302</button>
-                            <button class="btn-video" data-id="61fkqvFw1fk">Dpto. 303</button>
+                            <button class="btn-video active" onclick="changeVideo('D7vMlM3mAmo', this)">Dpto. 302</button>
+                            <button class="btn-video" onclick="changeVideo('61fkqvFw1fk', this)">Dpto. 303</button>
                         </div>
 
                         <div class="video-responsive">
@@ -90,11 +90,22 @@
             </div>
         </aside>
     </main>
-
     <script>
+        // Función para los PLANOS (Esta ya te funcionaba)
         function changePlan(src, btn) {
             document.getElementById('planDisplay').src = src;
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Función para los VIDEOS (Nueva y simplificada)
+        function changeVideo(videoId, btn) {
+            const player = document.getElementById('main-video-player');
+            // Cambia el video e inicia automáticamente
+            player.src = "https://www.youtube.com/embed/" + videoId + "?rel=0&modestbranding=1&autoplay=1";
+            
+            // Cambia el color del botón
+            document.querySelectorAll('.btn-video').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
     </script>

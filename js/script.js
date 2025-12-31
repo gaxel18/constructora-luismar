@@ -123,28 +123,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    // Función para cambiar los PLANOS
-    function changePlan(src, btn) {
-        document.getElementById('planDisplay').src = src;
-        // Quitar clase active de los botones de planos
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
-    // Función para cambiar los VIDEOS
-    document.addEventListener('DOMContentLoaded', function() {
-        const videoButtons = document.querySelectorAll('.btn-video');
-        const player = document.getElementById('main-video-player');
-
-        videoButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const videoId = this.getAttribute('data-id');
-                // Cambiamos el video y activamos el autoplay
-                player.src = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1`;
-                
-                // Cambiamos el estado visual de los botones de video
-                videoButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    });
+    
