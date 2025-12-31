@@ -297,40 +297,96 @@ body { font-family: 'Roboto', sans-serif; background: var(--white); color: #333;
     }
 }
 /* Contenedor del video */
-.proyecto-video {
-    padding: 60px 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.proyecto-video h3 {
+.video-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
 }
 
-/* Magia para que el video sea fluido */
+.btn-video {
+    padding: 12px 25px;
+    border: 2px solid #333;
+    background: transparent;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-video.active, .btn-video:hover {
+    background: #333;
+    color: #fff;
+}
+
 .video-responsive {
     position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    max-width: 1000px; /* Tamaño máximo en PC */
+    max-width: 900px;
     margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .video-responsive iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    top: 0; left: 0; width: 100%; height: 100%;
 }
 
-@media (max-width: 768px) {
-    .video-responsive {
-        margin: 0 15px; /* Pequeño margen en celulares */
-    }
+/* Centrar títulos y contenedores de botones */
+.plans-section h3, 
+.proyecto-video h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Centrar botones de los Planos */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Centrar botones de Video */
+.video-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+/* Centrar la imagen del plano */
+.plan-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.plan-viewer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para los botones de video para que se vean mejor */
+.btn-video {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-video.active {
+    background: #333;
+    color: #fff;
 }
