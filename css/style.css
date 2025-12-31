@@ -104,3 +104,80 @@ header { background: #fff; height: 90px; position: fixed; width: 100%; top:0; z-
     .form-side { position: relative; top: 0; }
     .company-img { order: -1; margin-bottom: 40px; }
 }
+
+.footer-project {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Separa logo de suscripción */
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-brand, .footer-newsletter {
+    flex: 1;
+    text-align: center; /* Centra el contenido internamente */
+}
+
+.footer-logo-alt {
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #b19149; /* Color dorado */
+}
+
+/* Ajuste del formulario de suscripción */
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background: #b19149;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Responsive: En celular todo uno bajo otro */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
