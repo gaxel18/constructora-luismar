@@ -296,3 +296,41 @@ body { font-family: 'Roboto', sans-serif; background: var(--white); color: #333;
         justify-content: center;
     }
 }
+/* Contenedor del video */
+.proyecto-video {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.proyecto-video h3 {
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Magia para que el video sea fluido */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px; /* Tamaño máximo en PC */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .video-responsive {
+        margin: 0 15px; /* Pequeño margen en celulares */
+    }
+}
