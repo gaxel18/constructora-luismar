@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Bernandina | Constructora Luis Mar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/proyectos.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar-internal">
+            <div class="logo"><a href="../index.html"><img src="../img/logo.jpg"></a></div>
+            <a href="../index.html" class="btn-back">VOLVER AL INICIO</a>
+        </nav>
+    </header>
+
+    <section class="hero-project" style="background-image: url('../img/bernandina/FACHADA-FRONTAL-DIA.png');">
+        <div class="overlay"></div>
+        <div class="hero-info">
+            <span class="badge status-pre">PREVENTA EXCLUSIVA</span>
+            <h1>PROYECTO BERNANDINA</h1>
+            <p><i class="fas fa-map-marker-alt"></i> Calle Bernandina, Surquillo</p>
+        </div>
+    </section>
+
+    <main class="project-container">
+        <div class="content-side">
+            <div class="card-box">
+                <h2>TU NUEVO COMIENZO EN <span>SURQUILLO</span></h2>
+                <p>Bernandina es nuestro lanzamiento más reciente. Aprovecha los precios de preventa y asegura tu futuro hogar en un edificio moderno con acabados premium.</p>
+            </div>
+            
+            <div class="plans-section">
+                <h3>EXPLORA LOS <span>PLANOS</span></h3>
+                <div class="tabs-container">
+                    <button class="tab-btn active" onclick="changePlan('../img/bernandina/FLAT-301.png', this)">FLAT 301</button>
+                    <button class="tab-btn" onclick="changePlan('../img/bernandina/FLAT-302.png', this)">FLAT 302</button>
+                    <button class="tab-btn" onclick="changePlan('../img/bernandina/DUPLEX-1001-2PISO.png', this)">DUPLEX 1001</button>
+                </div>
+                <div class="plan-viewer">
+                    <img id="planDisplay" src="../img/bernandina/FLAT-301.png" alt="Plano del Departamento">
+                </div>
+                <div class="brochure-box">
+                <div class="brochure-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="brochure-text">
+                    <h4>BROCHURE DEL PROYECTO</h4>
+                    <p>Descarga todos los detalles, acabados y plantas del edificio en PDF.</p>
+                </div>
+                <a href="../brochure_bernandina.pdf" download class="btn-download">
+                    DESCARGAR PDF <i class="fas fa-download"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+
+        <aside class="form-side">
+            <div class="sticky-form dark-theme">
+                <h3>RESERVA CON PRECIO DE PREVENTA</h3>
+                <form>
+                    <input type="text" placeholder="Nombre">
+                    <input type="tel" placeholder="WhatsApp">
+                    <button type="submit" class="btn-send">SOLICITAR DESCUENTO</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        function changePlan(src, btn) {
+            document.getElementById('planDisplay').src = src;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+<footer class="footer-project">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../img/logo.jpg" class="footer-logo-alt" alt="Luis Mar Logo">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Aviación 3952, Surquillo, Lima.</p>
+                <p><i class="fas fa-phone-alt"></i> +51 912 501 126</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51912501126"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>BOLETÍN DE NOVEDADES</h4>
+                <p>Suscríbete para recibir información de nuevos lanzamientos y bonos exclusivos.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="button">UNIRME</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Constructora Luis Mar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</html>

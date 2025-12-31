@@ -1,0 +1,298 @@
+:root {
+    --black: #000000;
+    --yellow: #f39c12;
+    --white: #ffffff;
+    --gray: #f8f8f8;
+}
+
+* { margin:0; padding:0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background: var(--white); color: #333; }
+
+/* NAVBAR INTERNA */
+.navbar-internal {
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-internal .logo img { height: 45px; }
+.btn-back { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.8rem; border: 1px solid #ddd; padding: 10px 20px; border-radius: 4px; transition: 0.3s; }
+.btn-back:hover { background: var(--black); color: var(--yellow); }
+
+/* HERO PROYECTO */
+.hero-project {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 80px;
+    color: #fff;
+}
+.overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
+.hero-info { z-index: 2; max-width: 800px; }
+.hero-info h1 { font-family: 'Montserrat'; font-size: 3.5rem; line-height: 1; }
+.hero-info p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+
+/* BADGES */
+.badge { display: inline-block; padding: 8px 15px; font-weight: 800; border-radius: 4px; font-size: 0.8rem; margin-bottom: 15px; }
+.status-now { background: var(--yellow); color: #000; }
+.status-pre { background: var(--black); color: var(--yellow); }
+
+/* LAYOUT CONTENIDO */
+.project-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 60px;
+}
+
+.content-side h2 { font-family: 'Montserrat'; font-size: 2.2rem; margin-bottom: 20px; }
+.content-side h2 span { color: var(--yellow); }
+.content-side p { line-height: 1.8; color: #555; }
+
+.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; list-style: none; margin-top: 30px; }
+.features-grid li { padding: 15px; background: var(--gray); border-radius: 8px; font-weight: 700; display: flex; align-items: center; }
+.features-grid i { color: var(--yellow); margin-right: 15px; font-size: 1.2rem; }
+
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 40px; }
+.gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+
+/* PLANOS */
+.plans-section { margin-top: 60px; }
+.tabs-container { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+.tab-btn { padding: 12px 20px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 700; border-radius: 5px; }
+.tab-btn.active { background: var(--yellow); border-color: var(--yellow); }
+.plan-viewer { background: var(--gray); padding: 30px; border-radius: 12px; text-align: center; }
+.plan-viewer img { max-width: 100%; height: auto; border: 1px solid #eee; }
+
+/* FORMULARIO STICKY */
+.form-side { position: sticky; top: 120px; height: fit-content; }
+.sticky-form { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-top: 6px solid var(--yellow); }
+.sticky-form h3 { font-family: 'Montserrat'; font-size: 1.3rem; margin-bottom: 15px; }
+.sticky-form input, .sticky-form select { width: 100%; padding: 15px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 6px; }
+.btn-send { width: 100%; background: var(--black); color: var(--yellow); padding: 18px; border: none; border-radius: 6px; font-weight: 800; cursor: pointer; transition: 0.3s; }
+.btn-send:hover { background: var(--yellow); color: #000; }
+
+.dark-theme { background: var(--black); color: #fff; }
+.dark-theme input { background: #222; border: 1px solid #444; color: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .project-container { grid-template-columns: 1fr; }
+    .hero-info h1 { font-size: 2.5rem; }
+    .form-side { position: relative; top: 0; }
+}
+
+/* === ESTILOS DEL FOOTER (PROYECTOS) === */
+.footer-project {
+    background: var(--black);
+    color: #fff;
+    padding: 80px 0 30px 0;
+    margin-top: 100px;
+}
+
+.footer-project .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.footer-logo-alt {
+    height: 60px;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1); /* Convierte el logo a blanco */
+}
+
+.footer-brand p {
+    color: #bbb;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-brand i {
+    color: var(--yellow);
+    margin-right: 12px;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--yellow);
+    color: #000;
+}
+
+/* Newsletter */
+.footer-newsletter h4 {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--yellow);
+}
+
+.footer-newsletter p {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.subscribe-form button {
+    background: var(--yellow);
+    color: #000;
+    border: none;
+    padding: 0 25px;
+    font-weight: 800;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-project .footer-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .footer-brand p {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+    }
+    
+    .subscribe-form button {
+        padding: 15px;
+    }
+}
+/* === ESTILO BROCHURE === */
+.brochure-box {
+    display: flex;
+    align-items: center;
+    background: #fdf9f0; /* Un tono crema suave */
+    border: 2px dashed var(--yellow);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.brochure-icon {
+    font-size: 2.5rem;
+    color: #e74c3c; /* Rojo PDF */
+}
+
+.brochure-text {
+    flex: 1;
+}
+
+.brochure-text h4 {
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--black);
+}
+
+.brochure-text p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+.btn-download {
+    background: var(--black);
+    color: var(--yellow);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-download:hover {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+@media (max-width: 600px) {
+    .brochure-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+}

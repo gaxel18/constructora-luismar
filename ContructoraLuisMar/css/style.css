@@ -1,0 +1,106 @@
+:root {
+    --black: #000000;
+    --yellow: #f39c12;
+    --white: #ffffff;
+    --dark-gray: #1a1a1a;
+    --light-gray: #f4f4f4;
+}
+
+* { margin:0; padding:0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; overflow-x: hidden; background: var(--white); }
+html { scroll-behavior: smooth; }
+
+/* === HEADER & NAV === */
+header { background: #fff; height: 90px; position: fixed; width: 100%; top:0; z-index:1000; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.navbar { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 30px; }
+.logo img { height: 55px; }
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; transition: 0.3s; }
+.nav-links a:hover { color: var(--yellow); }
+.btn-cotizar-nav { background: var(--black); color: var(--yellow) !important; padding: 12px 24px; border-radius: 4px; }
+.btn-cotizar-nav:hover { background: var(--yellow); color: var(--black) !important; }
+
+/* === SECCIONES === */
+.section-padding { padding: 120px 5%; }
+.title-main { text-align: center; font-family: 'Montserrat'; font-size: 2.8rem; margin-bottom: 60px; color: var(--black); }
+.title-main span { color: var(--yellow); }
+
+/* === HERO === */
+.hero-home { height: 100vh; background: url('../img/aviacion/fondo.jpg') center/cover fixed; display: flex; align-items: center; justify-content: center; position: relative; }
+.hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.55); }
+.hero-content { z-index: 1; text-align: center; color: #fff; }
+.hero-content h1 { font-family: 'Montserrat'; font-size: 4.5rem; font-weight: 800; line-height: 1.1; }
+.hero-content h1 span { color: var(--yellow); }
+.hero-btns { display: flex; gap: 25px; justify-content: center; margin-top: 40px; }
+.btn-black { background: #000; color: var(--yellow); padding: 18px 40px; text-decoration: none; font-weight: 700; border-radius: 4px; border: 2px solid #000; transition: 0.3s; }
+.btn-black:hover { background: transparent; color: #fff; border-color: var(--yellow); }
+.btn-yellow { background: var(--yellow); color: #000; padding: 18px 40px; text-decoration: none; font-weight: 700; border-radius: 4px; border: 2px solid var(--yellow); transition: 0.3s; }
+.btn-yellow:hover { background: transparent; color: var(--yellow); }
+
+/* === ROLLER === */
+.slider-container { position: relative; max-width: 1100px; margin: 0 auto; overflow: hidden; border-radius: 12px; background: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.slider-track { display: flex; transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1); }
+.slide { min-width: 100%; height: 550px; display: flex; flex-direction: column; }
+.slide img { width: 100%; height: 480px; object-fit: contain; padding: 30px; }
+.slide span { background: var(--black); color: var(--yellow); text-align: center; padding: 18px; font-weight: 700; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 20px; cursor: pointer; z-index: 5; font-size: 1.5rem; }
+.next { right: 0; }
+
+/* === PROYECTOS GRID === */
+.projects-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; }
+.project-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08); transition: 0.4s; }
+.project-card:hover { transform: translateY(-10px); }
+.project-img { height: 300px; position: relative; }
+.project-img img { width: 100%; height: 100%; object-fit: cover; }
+.project-status { position: absolute; top: 20px; left: 20px; background: var(--yellow); padding: 8px 15px; font-weight: 800; font-size: 0.7rem; border-radius: 4px; }
+.project-info { padding: 35px; }
+.btn-project { display: block; width: 100%; background: var(--yellow); color: #000; text-align: center; padding: 18px; text-decoration: none; font-weight: 800; border-radius: 8px; margin-top: 20px; border: 2px solid var(--yellow); }
+.btn-project:hover { background: var(--black); color: var(--yellow); border-color: var(--black); }
+
+/* === DESTACADO + STICKY FORM === */
+.split-layout { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 80px; max-width: 1300px; margin: 0 auto; align-items: start; }
+.tag { background: var(--yellow); color: var(--black); padding: 8px 15px; font-weight: 700; font-size: 0.75rem; border-radius: 4px; margin-bottom: 15px; display: inline-block; }
+.info-side h2 { font-family: 'Montserrat'; font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
+.features-list { list-style: none; margin: 30px 0; }
+.features-list li { margin-bottom: 12px; display: flex; align-items: center; font-size: 1.1rem; }
+.features-list i { color: var(--yellow); margin-right: 15px; font-size: 1.2rem; }
+.building-images { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+.building-images img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+
+.form-side { position: sticky; top: 130px; }
+.sticky-form-box { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 25px 60px rgba(0,0,0,0.12); border-top: 6px solid var(--yellow); }
+.sticky-form-box h3 { font-family: 'Montserrat'; margin-bottom: 10px; }
+.sticky-form-box input, select { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; }
+.btn-submit-pro { width: 100%; background: var(--black); color: var(--yellow); padding: 18px; font-weight: 800; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+.btn-submit-pro:hover { background: var(--yellow); color: #000; }
+
+/* === MAPA === */
+#mapa { margin: 100px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+
+/* === CONSTRUCTORA === */
+.company-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; align-items: center; max-width: 1300px; margin: 0 auto; }
+.company-text h2 { font-family: 'Montserrat'; font-size: 2.8rem; margin-bottom: 20px; }
+.company-text p { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px; }
+.company-img { position: relative; }
+.company-img img { width: 100%; border-radius: 12px; box-shadow: 15px 15px 0 var(--black); }
+.img-badge { position: absolute; bottom: -15px; right: -15px; background: var(--yellow); color: #000; padding: 10px 20px; font-weight: 800; font-size: 0.8rem; }
+
+/* === FOOTER === */
+.footer-dark { background: var(--black); color: #fff; padding: 80px 5%; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.footer-logo { height: 70px; margin-bottom: 30px; filter: brightness(0) invert(1); }
+.footer-info p { color: #bbb; margin-bottom: 10px; display: flex; align-items: center; }
+.footer-info i { color: var(--yellow); margin-right: 10px; }
+.footer-socials { display: flex; gap: 20px; margin-top: 20px; }
+.footer-socials a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
+.footer-socials a:hover { color: var(--yellow); }
+.newsletter-box { display: flex; margin-top: 15px; }
+.newsletter-box input { padding: 15px; border: none; width: 100%; border-radius: 4px 0 0 4px; }
+.newsletter-box button { background: var(--yellow); border: none; padding: 0 20px; border-radius: 0 4px 4px 0; font-weight: 700; cursor: pointer; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .split-layout, .company-layout, .footer-container { grid-template-columns: 1fr; }
+    .form-side { position: relative; top: 0; }
+    .company-img { order: -1; margin-bottom: 40px; }
+}

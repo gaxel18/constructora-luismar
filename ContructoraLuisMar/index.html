@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructora Luis Mar | Proyectos Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        // Reemplaza "TU_PUBLIC_KEY" con la que copiaste en el paso 1
+        emailjs.init("zPYM2_JpVI3ndws-Q");
+    })();
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.jpg" alt="Luis Mar"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#galeria">PLANOS</a></li>
+                <li><a href="#empresa">NOSOTROS</a></li>
+                <li><a href="#contacto-form" class="btn-cotizar-nav">COTIZAR AHORA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>TU HOGAR IDEAL, <br><span>INVERSIÓN SEGURA</span></h1>
+            <div class="hero-btns">
+                <a href="#proyectos" class="btn-black">VER PROYECTOS</a>
+                <a href="#contacto-form" class="btn-yellow">COTIZAR AHORA</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section-padding" style="background: var(--light-gray);">
+        <h2 class="title-main">DISEÑOS Y <span>PLANOS</span></h2>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                <div class="slide"><img src="img/bernandina/FACHADA-FRONTAL-DIA.png"><span>Fachada Principal</span></div>
+                <div class="slide"><img src="img/bernandina/FACHADA-FRONTAL-NOCHE.png"><span>Vista Nocturna</span></div>
+                <div class="slide"><img src="img/bernandina/FLAT-301.png"><span>Plano Flat 301</span></div>
+                <div class="slide"><img src="img/bernandina/DUPLEX-1001-2PISO.png"><span>Duplex 1001</span></div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section-padding">
+        <h2 class="title-main">NUESTROS <span>PROYECTOS</span></h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/aviacion/depas.jpg">
+                    <div class="project-status">ENTREGA INMEDIATA</div>
+                </div>
+                <div class="project-info">
+                    <h3>Aviación Tower</h3>
+                    <p>Av. Aviación 3952, Surquillo</p>
+                    <a href="proyectos/aviacion-tower.html" class="btn-project">VER DETALLES</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/bernandina/FACHADA-FRONTAL-DIA.png">
+                    <div class="project-status" style="background:#000; color:var(--yellow)">PREVENTA</div>
+                </div>
+                <div class="project-info">
+                    <h3>Bernandina</h3>
+                    <p>Calle Bernandina, Surquillo</p>
+                    <a href="proyectos/bernandina.html" class="btn-project">VER DETALLES</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #fff;">
+        <div class="split-layout">
+            <div class="info-side">
+                <span class="tag">DESTACADO</span>
+                <h2>AVIACIÓN TOWER <br><span>SURQUILLO</span></h2>
+                <p class="description">Ubicado en una zona estratégica de Surquillo, este edificio ofrece la mejor conectividad con San Borja y Miraflores. Departamentos diseñados para el estilo de vida moderno.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Departamentos de 1, 2 y 3 dormitorios.</li>
+                    <li><i class="fas fa-check-circle"></i> Áreas comunes: Parrillas, Coworking y Gym.</li>
+                    <li><i class="fas fa-check-circle"></i> Acabados de lujo y máxima seguridad.</li>
+                </ul>
+                <div class="building-images">
+                    <img src="img/aviacion/depas.jpg">
+                    <img src="img/aviacion/fondo.jpg">
+                </div>
+            </div>
+            
+            <div class="form-side" id="contacto-form">
+                <div class="sticky-form-box">
+                    <h3>¿TE INTERESA?</h3>
+                    <p>Déjanos tus datos y un asesor se comunicará contigo hoy mismo.</p>
+                    <form id="contacto-home">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                        <input type="tel" name="telefono" placeholder="WhatsApp / Teléfono" required>
+                        <input type="email" name="email" placeholder="Correo Electrónico" required>
+                        <select name="proyecto">
+                            <option value="Aviación Tower">Aviación Tower</option>
+                            <option value="Bernandina">Bernandina</option>
+                        </select>
+                        <button type="submit" id="btn-enviar" class="btn-submit-pro">AGENDAR VISITA</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.86438914619!2d-77.0049448!3d-12.1121517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7efd7a049d5%3A0xc39f88d2273187a!2sAv.%20Aviaci%C3%B3n%203952%2C%20Surquillo%2015038!5e0!3m2!1ses-419!2spe!4v1715634567890!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section id="empresa" class="section-padding">
+        <div class="company-layout">
+            <div class="company-text">
+                <h2>CONSTRUCTORA <span>LUIS MAR</span></h2>
+                <p>Somos una empresa peruana dedicada al desarrollo de proyectos inmobiliarios premium. Nos enfocamos en crear espacios funcionales, seguros y con un diseño arquitectónico vanguardista.</p>
+                <p>Nuestra experiencia en el distrito de Surquillo nos permite ofrecer departamentos que garantizan una alta plusvalía y el mejor retorno de inversión para nuestros clientes.</p>
+            </div>
+            <div class="company-img">
+                <img src="img/bernandina/FACHADA-FRONTAL-NOCHE.png" alt="Luis Mar Edificios">
+                <div class="img-badge">CALIDAD GARANTIZADA</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="img/logo.jpg" class="footer-logo" alt="Logo Luis Mar">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Aviación 3952, Surquillo, Lima.</p>
+                <p><i class="fas fa-phone"></i> +51 912 501 126</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51912501126"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>SUSCRÍBETE</h4>
+                <p>Recibe noticias de nuestros próximos lanzamientos.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button>OK</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
